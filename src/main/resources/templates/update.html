@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<form method="post" action="update">
+    <input type="hidden" name="id" value="${branches.id}"/>
+    <p>
+        网点名称：<input name="name" value="${branches.name}"/>
+    </p>
+
+    <p>
+        所在城区：
+        <select name="cityId">
+            <#list cityareaList as city>
+            <option value="${city.id}" ${(branches.cityarea.id == city.id)?string('selected','')}>${city.name}</option>
+        </#list>
+        </select>
+    </p>
+
+    <p>
+         网点地址：<input name="address"   value="${branches.address}"/>
+    </p>
+    <p>
+        联系电话：<input name="telephone"   value="${branches.telephone}"/>
+    </p>
+
+    <p>
+        <input type="submit" value="添加">
+    </p>
+</form>
+</body>
+</html>

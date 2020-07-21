@@ -33,9 +33,9 @@ public class BranchesServiceImpl implements BranchesService {
     @Override
     public Page<Branches> getBranchesPage(Integer pageNow, Integer pageSize) {
        if(pageNow == null || pageNow < 1){
-           pageNow = 1;
+           pageNow = 2;
        }if (pageSize == null){
-         pageSize =3;
+         pageSize =4;
         }
         Pageable pageable = PageRequest.of(pageNow - 1, pageSize, Sort.Direction.ASC, "id");
         Page<Branches> page = branchesRepository.findAll(pageable);

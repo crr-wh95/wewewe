@@ -30,11 +30,6 @@ public class BranchesTest {
 
 
     }
-    @Test
-    public void test2(){
-        Page<Branches> page = branchesService.getBranchesPage(1, 2);
-        System.out.println(page);
 
 
-    }
 }

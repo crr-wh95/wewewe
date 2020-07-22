@@ -48,7 +48,7 @@ public class BranchesController {
 
     @RequestMapping("/toupdate")
     public String toupdate(@RequestParam("id") Integer id,Model model){
-        System.out.println("1111111111111");
+        System.out.println("2222222222");
         //根据id查询
         Branches branches = branchesService.getByBranchesId(id);
         model.addAttribute("branches",branches);

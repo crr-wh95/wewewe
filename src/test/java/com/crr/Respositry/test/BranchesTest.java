@@ -27,5 +27,14 @@ public class BranchesTest {
     public void test2(){
         Page<Branches> page = branchesService.getBranchesPage(1, 2);
         System.out.println(page);
+
+
+    }
+    @Test
+    public void test2(){
+        Page<Branches> page = branchesService.getBranchesPage(1, 2);
+        System.out.println(page);
+
+
     }
 }
